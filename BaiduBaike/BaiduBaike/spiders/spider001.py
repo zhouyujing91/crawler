@@ -1,4 +1,6 @@
-﻿#scrapy crawl baidubaike -o items.json -t json
+﻿#scrapy crawl spider001 -o items.json -t json
+
+#url model: http://baike.baidu.com/view/33668htm
 
 import scrapy
 
@@ -9,11 +11,11 @@ from scrapy.selector import Selector
 from BaiduBaike.items import BaidubaikeItem
 
 import urllib
-import datetime 
+import datetime
 import random
 
 class BaidubaikeSpider(scrapy.Spider):
-    name = "baidubaike"
+    name = "spider001"
     allowed_domains = ['baike.baidu.com']
     start_urls = [
         'http://baike.baidu.com/fenlei/%E6%94%BF%E6%B2%BB%E4%BA%BA%E7%89%A9',#政治人物
